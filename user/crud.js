@@ -108,7 +108,6 @@ const userCrud = {
 
     deleteUser: function (req, res) {
         return UserModel.findById(req.params.id, function (err, user) {
-            console.log(user);
             if (!user) {
                 res.statusCode = 404;
                 return res.send({error: 'Not found'});
